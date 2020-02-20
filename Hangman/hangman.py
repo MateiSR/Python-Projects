@@ -105,7 +105,6 @@ while turns > 0 and progress_field != initial_chosen_word:
                 position = initial_chosen_word.find(guess)
                 field_list[position] = char
                 progress_field = ''.join(field_list)
-                #print('Completion: ' + progress_field)
 
                 success = True
                 found += 1
@@ -129,17 +128,19 @@ while turns > 0 and progress_field != initial_chosen_word:
             print('You didn\'t guess the word. It was: ' + initial_chosen_word +'.')
         
         if turns == 6:
-            print(drawings[6])
+            print(drawings[0])
         elif turns == 5:
-            print(drawings[5])
+            print(drawings[1])
         elif turns == 4:
-            print(drawings[4])
+            print(drawings[2])
         elif turns == 3:
             print(drawings[3])
         elif turns == 2:
-            print(drawings[2])
+            print(drawings[4])
         elif turns == 1:
-            print(drawings[1])
+            print(drawings[5])
         elif turns == 0:
-            print(drawings[0])
+            print(drawings[6] + '\n' * 2)
+
+            # daca litera de 2 ori - reparat de pus in field
 
