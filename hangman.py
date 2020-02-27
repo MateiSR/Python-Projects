@@ -142,5 +142,3 @@ while turns > 0 and progress_field != initial_chosen_word:
         elif turns == 0:
             print(drawings[6] + '\n' * 2)
 
-            # daca litera de 2 ori - reparat de pus in field
-
