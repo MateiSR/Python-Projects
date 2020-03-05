@@ -71,7 +71,6 @@ for i in range(len(chosen_word)):
 
 turns = 6
 wrong = 0
-
 while turns > 0:
     cls()
     print('DEBUG: Chosen word: ' + chosen_word)
@@ -81,6 +80,8 @@ while turns > 0:
 
     correct = False
     guess = input('Guess a character: ')
+    while len(guess) != 1:
+        guess = input('Guess a character: ')
 
     for j in range(len(chosen_word)):
         if chosen_word[j] == guess:
