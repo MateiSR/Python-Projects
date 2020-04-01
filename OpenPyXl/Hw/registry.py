@@ -18,6 +18,7 @@ for row in sheet.iter_rows(min_row = 2, min_col = 0, values_only=True):
         "days_in": row[5]
     }
     registry[current_id] = current
+
 # Dump and format to json    
     with open('output.json', 'w') as fp:
         json.dump(registry, fp, sort_keys=True, indent=4)
