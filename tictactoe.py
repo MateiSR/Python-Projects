@@ -22,7 +22,7 @@ def generate_window(): # generate window & draw grid lines
 
 def start_game(): # Start game 
     global inputs, window
-    for i in range(8):
+    for i in range(9):
         print(i)
         # Player X
         if i % 2 == 0:
@@ -85,6 +85,7 @@ def get_square(x, y): # x and y are mouse positions
 def draw_circle(center): # Draw O
     circle = Circle(center, 40)
     circle.setWidth(5)
+    circle.setOutline('red')
     circle.draw(window)
     
 def draw_x(diag1, diag2): # Draw X
@@ -253,6 +254,8 @@ def check_win(inputs):
         line.setWidth(5)
         line.draw(window)
         return True
+    else:
+        print('Tie!')
 
 #while True:
 show_window()
