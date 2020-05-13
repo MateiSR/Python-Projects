@@ -1,0 +1,11 @@
+body {
+    background: rgb(233, 236, 239);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

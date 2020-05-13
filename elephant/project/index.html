@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Elephant</title>
+    <link rel="icon" href="elephant.ico">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Elephant is a Python reminder app created using Tkinter, basic JSON storage and web API requests. The original release took place on 5/15/2020.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:mail@example.com" class="text-white">via Mail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>Elephant</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <!--Jumbotron Main-->
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Elephant</h1>
+            <h1 class="lead">reminders made right</h1>
+            <p class="lead text-muted">Elephant is a reminder app designed for students who have a hard time dealing with their school schedule.<br>Our idea was to make an app which allows students all over the world to keep track of their classes.</p>
+            <p>
+                <a href="#getStarted" class="btn btn-primary my-2">Get started</a>
+                <!--<a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+            </p>
+        </div>
+    </div>
+    <!--Picture Grid-->
+    <hr>
+    <div class="container-fluid text-center">
+        <h1 style="font-weight: 500;">App Interface</h1>
+        <p class="lead">The interface is intuitive and easy to use.</p>
+        <p class="lead">First off, when you start the app, it will check for reminders that have went off while you were offline. You will be noticed about them, and they will be deleted afterwards.</p>
+        <div class="row">
+            <div class="col">
+                <img src="./media/main_menu.png">
+            </div>
+            <div class="col">
+                <img src="./media/news_stats.png">
+
+            </div>
+            <div class="col">
+                <img src="./media/list.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">This is the <strong>main app</strong>. Here you can easily add reminders by providing a title, the date & time, and optionally a description.</p>
+            </div>
+            <div class="col">
+                <p class="lead">The <strong>news & stats</strong> window provides a small list of the trending news regarding the COVID-19 pandemic, as well as current available statistics provided by the World Health Organization.</p>
+            </div>
+            <div class="col">
+                <p class="lead">The use of the <strong>View reminders</strong> is straight-forward. This provides a list of the currently active reminders, and a listbox from which you can delete any reminder you wish to.</p>
+            </div>
+        </div>
+    </div>
+    <!--Get started-->
+    <hr>
+    <div class="container-fluid text-center">
+        <h1 style="font-weight: 500;">Get started</h1>
+        <p class="lead">Do you like the app's concept? <strong>Why not give it a try?</strong></p>
+        <ol class="list-unstyled">
+            <p>
+                <li><b>1. </b>Download the archive using the button below</li>
+                <li><b>2. </b>Extract the archive, then install the required fonts & Python3 modules.</li>
+                <li><b>3. </b>Run it! <em>python3 elephant.py</em></li>
+            </p>
+        </ol>
+        <a style="margin-bottom:1%;" href="./media/elephant-beta0.zip" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download</a>
+        <a id="getStarted"></a>
+    </div>
+    <!--Footer-->
+    <div class="card text-center" style="background: rgb(233, 236, 239)!important;">
+        <div class="card-body">
+            <h5 class="card-title">You can now support the project on Patreon!</h5>
+            <p class="card-text">Help keep the project running at <a href="https://example.com">patreon.com</a></p>
+        </div>
+        <div class="card-footer text-muted">
+            &copy; elephant 2020
+        </div>
+    </div>
+</body>
+
+</html>
