@@ -55,7 +55,6 @@ def check_active(reminder):
     current_epoch = time.time()
     reminder_epoch = reminders[reminder]['epoch']
     if int(reminder_epoch) < int(current_epoch):
-        print(reminder)
         return False
     else:
         return True
