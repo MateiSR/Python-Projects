@@ -1,4 +1,6 @@
 import pygame
+#import pygame_textinput as pygame_ti
+import os
 import sys
 import random
 
@@ -9,12 +11,14 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
+WHITE = (255, 255, 255)
 WINDOW_WIDTH = 600
 WINDOW_HEIGHT = 600
 VELOCITY = 10
 SNAKE_WIDTH = 15
 APPLE_SIZE = 20
 TOP_WIDTH = 40
+cpath = os.path.dirname(__file__)
 small_font = pygame.font.SysFont('Courier New', 25)
 medium_font = pygame.font.SysFont('Courier New', 20, True)
 large_font = pygame.font.SysFont('Courier New', 40, True, True)
@@ -22,14 +26,19 @@ clock = pygame.time.Clock()
 
 canvas = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Snake Game')
+"""
 snake_img = pygame.image.load('head.png')
 apple_img = pygame.image.load('apple2.png')
 tail_img = pygame.image.load('tail1.png')
+"""
+snake_img = pygame.image.load(os.path.join(cpath, 'head.png'))
+apple_img = pygame.image.load(os.path.join(cpath, 'apple2.png'))
+tail_img = pygame.image.load(os.path.join(cpath, 'tail1.png'))
 apple_img_rect = apple_img.get_rect()
 
 
 def start_game():
-    canvas.fill(BLACK)
+    canvas.fill(WHITE)
     start_font1 = large_font.render("Welcome to snake game", True, BLUE)
     start_font2 = medium_font.render("Play Game", True, BLACK, GREEN)
     start_font3 = medium_font.render("Instructions", True, BLACK, GREEN)
@@ -49,6 +58,7 @@ def start_game():
     canvas.blit(start_font2, start_font2_rect)
     canvas.blit(start_font3, start_font3_rect)
     canvas.blit(start_font4, start_font4_rect)
+
     pygame.display.update()
     while True:
         for event in pygame.event.get():
@@ -56,8 +66,6 @@ def start_game():
                 pygame.quit()
                 sys.exit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_p:
-                    gameloop()
                 if event.key == pygame.K_q:
                     pygame.quit()
                     sys.exit()
@@ -68,6 +76,20 @@ def start_game():
                         start_inst(start_font1, start_font1_rect)
                 if x > start_font2_rect.left and x < start_font2_rect.right:
                     if y > start_font2_rect.top and y < start_font2_rect.bottom:
+                        # Insert login here
+                        """
+                        logged_in = False
+                        if logged_in == False:
+                            username_in = pygame_ti.TextInput()
+                            canvas.blit(username_in.get_surface(), (150, 150))
+                            pygame.display.update
+                            clock.tick(30)
+                            events = pygame.event.get()
+                            if username_in.update(events):
+                                username = textinput.get_text()
+                                print(username)
+                        else:
+                        """
                         gameloop()
                 if x > start_font4_rect.left and x < start_font4_rect.right:
                     if y > start_font4_rect.top and y < start_font4_rect.bottom:
