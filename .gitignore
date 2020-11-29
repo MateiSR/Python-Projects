@@ -6,3 +6,4 @@ docx/__pycache__/docx.cpython-38.pyc
 /test/*
 /MsStuff/pptx/test.pptx
 /.vs/*
+keys.json
